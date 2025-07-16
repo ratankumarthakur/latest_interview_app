@@ -7,14 +7,15 @@ import 'package:interview_app/dashboardpage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  //sems 
   await Firebase.initializeApp(
     options: const FirebaseOptions(
-      apiKey: "AIzaSyArwn6dKr7ppJkjOE45VfQ9OCRih9nClag",
-      appId: "1:61768828498:android:b76f9de2883171f460018b",
-      storageBucket: "sems-4c37f.appspot.com",
-      authDomain: "sems-4c37f.firebaseapp.com",
-      messagingSenderId: "61768828498",
-      projectId: "sems-4c37f",
+      apiKey: "",
+      appId: "",
+      storageBucket: "",
+      authDomain: "",
+      messagingSenderId: "",
+      projectId: "",
     ),
   );
   runApp(const InterviewApp());
