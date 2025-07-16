@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:math' as math;
+import 'package:interview_app/chatbot.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -184,15 +185,33 @@ Future<void> _requestMicPermission() async {
       _startRound();
     }
   }
+final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
 
   /* ─────────  UI  ───────── */
   @override
   Widget build(BuildContext context) => Scaffold(
+    key: _scaffoldKey,
+
+    
         appBar: AppBar(
+          actions: [
+            IconButton(
+          icon: const Icon(Icons.chat),
+          onPressed: () {
+            _scaffoldKey.currentState?.openEndDrawer(); // Opens the drawer
+          },
+        ),
+
+
+          ],
           backgroundColor: const Color(0xff48c26e),
           leading: BackButton(color: Colors.white),
           title: Text('Question ${_idx + 1}/$_total',
               style: const TextStyle(color: Colors.white)),
+        ),
+        endDrawer: Drawer(
+          child: CustomChatBot(),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16),
@@ -249,6 +268,20 @@ Future<void> _requestMicPermission() async {
                           onPressed: _submit,
                           child: const Text('Submit'),
                         ),
+                        const SizedBox(width: 10),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color(0xff48c26e),
+                              foregroundColor: Colors.white),
+                          onPressed:(){ Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => CustomChatBot()),
+              );},
+                          child: const Text('Ask AI'),
+                        ),
+
                       ],
                     ),
                   ],

@@ -107,15 +107,15 @@ class _AddQuestionPageState extends State<AddQuestionPage> {
               ],
             ),
           ),
-          if (_msg != null)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: Text(
-                _msg!,
-                style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-            ),
+          // if (_msg != null)
+          //   Padding(
+          //     padding: const EdgeInsets.symmetric(vertical: 8),
+          //     child: Text(
+          //       _msg!,
+          //       style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+          //       textAlign: TextAlign.center,
+          //     ),
+          //   ),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton.icon(
