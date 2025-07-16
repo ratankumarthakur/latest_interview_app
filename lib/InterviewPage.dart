@@ -197,7 +197,8 @@ final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
         appBar: AppBar(
           actions: [
             IconButton(
-          icon: const Icon(Icons.chat),
+              
+          icon: const Icon(Icons.chat,color:Colors.white),
           onPressed: () {
             _scaffoldKey.currentState?.openEndDrawer(); // Opens the drawer
           },
@@ -254,7 +255,7 @@ final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
                                     const Color(0xff48c26e)),
                             icon: Icon(
                                 _listening ? Icons.pause : Icons.mic),
-                            label: Text(
+                            label: Text(style:TextStyle(color:Colors.white),
                                 _listening ? 'Pause Listening' : 'Resume Mic'),
                             onPressed: _toggleListening,
                           ),
@@ -269,18 +270,7 @@ final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
                           child: const Text('Submit'),
                         ),
                         const SizedBox(width: 10),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  const Color(0xff48c26e),
-                              foregroundColor: Colors.white),
-                          onPressed:(){ Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (_) => CustomChatBot()),
-              );},
-                          child: const Text('Ask AI'),
-                        ),
+                        
 
                       ],
                     ),
