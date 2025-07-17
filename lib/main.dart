@@ -10,12 +10,13 @@ Future<void> main() async {
   //sems 
   await Firebase.initializeApp(
     options: const FirebaseOptions(
-      apiKey: "AIzaSyArwn6dKr7ppJkjOE45VfQ9OCRih9nClag",
-      authDomain: "sems-4c37f.firebaseapp.com",
-      projectId: "sems-4c37f",
-      storageBucket: "sems-4c37f.appspot.com",
-      messagingSenderId: "61768828498",
-      appId: "1:61768828498:web:9bbe93dbe4ebc19a60018b"
+      //sems
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: ""
     ),
   );
   runApp(const InterviewApp());
