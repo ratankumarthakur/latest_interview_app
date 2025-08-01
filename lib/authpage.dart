@@ -62,7 +62,7 @@ Widget build(BuildContext context) => Scaffold(
           _buildInputField(_name, '👤 Name'),
 
         const SizedBox(height: 12),
-        _buildInputField(_email, '📧 Email'),
+        _buildInputField(_email, '📧 enter Email'),
         const SizedBox(height: 12),
         _buildInputField(_pw, '🔑 Password', obscure: true),
         const SizedBox(height: 20),
