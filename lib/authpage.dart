@@ -57,12 +57,12 @@ Widget build(BuildContext context) => Scaffold(
       //mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.network(height: 300,width: double.infinity,"https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg?semt=ais_hybrid&w=740"),
+        Image.asset(height: 300,width: double.infinity,"assets/login.avif"),
         if (signUp)
           _buildInputField(_name, '👤 Name'),
 
         const SizedBox(height: 12),
-        _buildInputField(_email, '📧 enter Email'),
+        _buildInputField(_email, '📧 Email'),
         const SizedBox(height: 12),
         _buildInputField(_pw, '🔑 Password', obscure: true),
         const SizedBox(height: 20),
