@@ -57,7 +57,7 @@ Widget build(BuildContext context) => Scaffold(
       //mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(height: 300,width: double.infinity,"assets/login.avif"),
+        Image.asset(height: 300,width: double.infinity,"assets/login.jpg"),
         if (signUp)
           _buildInputField(_name, '👤 Name'),
 
